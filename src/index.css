@@ -1,9 +1,24 @@
 
-
 body {
-  font-family: "DIN Alternate", sans-serif;
   font-size: 16px;
+  box-sizing: border-box; 
+  overflow-x: hidden;
+  width: fit-content;
+  height: 100%; 
+  border: solid 1px; 
 }
+
+h1, h2, h3{
+  font-family: sans-serif; 
+}
+
+.links > a > img{
+  filter:invert(100%); 
+  width: 2em; 
+}
+
+
+/*
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -73,7 +88,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} 
+}  */
 
 @tailwind base;
 @tailwind components;

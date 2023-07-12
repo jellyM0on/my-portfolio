@@ -1,0 +1,5 @@
+{
+    "projects": [
+        {"title": "Poetry Blog", "description": "Sample description", "link": "link", "img": "img-link"}
+    ]
+}
