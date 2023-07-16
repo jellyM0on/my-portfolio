@@ -3,8 +3,9 @@ export default {
   content: ["./index.html",
     "./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+    },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin.cjs")],
 }
 

@@ -1,11 +1,35 @@
+body{
+  overflow: hidden; 
+}
 
 body {
-  font-size: 16px;
-  box-sizing: border-box; 
-  overflow-x: hidden;
-  width: fit-content;
-  height: 100%; 
-  border: solid 1px; 
+  box-sizing: border-box;
+ 
+  min-height: 100%; 
+  background-color: #fff;
+}
+
+.cursor {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+  background: 	#bb1fa4;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  mix-blend-mode:lighten;
+  pointer-events: none;
+}
+
+details >summary{
+  list-style: none;
+}
+
+details[open] summary{
+  background-color: black;
+  color: white;
 }
 
 h1, h2, h3{
@@ -13,9 +37,36 @@ h1, h2, h3{
 }
 
 .links > a > img{
-  filter:invert(100%); 
-  width: 2em; 
+  width: 3vw; 
 }
+
+.cursor-wrapper{
+  mix-blend-mode: difference;
+}
+
+.marquee {
+  position: relative;
+  width: 75vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-size: 2vw;
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 35s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
+
 
 
 /*
@@ -90,6 +141,17 @@ button:focus-visible {
   }
 }  */
 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+  .animation-delay-2000{
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000{
+    animation-delay: 4s;
+  }
+}

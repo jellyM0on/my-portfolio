@@ -5,25 +5,31 @@ import './App.css'
 
 import { Canvas } from '@react-three/fiber'; 
 import Intro from './components/home';
-import Links from './components/links'
+import NavBar from './components/navbar'
 import Project from './components/projects';
-import StarsCanvas  from './components/Stars'
+import StarsCanvas from './components/stars'
 
+document.body.onmousemove = function(e) {
+  document.documentElement.style.setProperty('--x',(e.clientX)+'px');
+  document.documentElement.style.setProperty('--y',(e.clientY)+'px');
+}
 
 
 function App() {
-  return(
-   <div className='p-10 bg-black text-white w-screen h-full overflow-y-hidden grid grid-rows-2 grid-cols-4'>
-      <Intro/>
-      <Links/>
-      <Project/>
-      <StarsCanvas/>
-   
 
+  return(
+    <div className=' w-screen h-screen border-4 border-black box-border'>
+      <span className='cursor'></span>
+    {/* body  */}
+    <NavBar/>
+    <div className='grid grid-cols-2 h-full box-border'>
+      <Intro/>
+      <Project/>
+
+    </div>
   
-   </div>
+    </div>
   )
-  
 }
 
 export default App

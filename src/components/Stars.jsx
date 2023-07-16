@@ -18,7 +18,7 @@ const Stars = (props) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color='#674ea7'
+          color='#FF69B4'
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
@@ -30,12 +30,12 @@ const Stars = (props) => {
 
 const StarsCanvas = () => { 
   return (
-    <div className='w-full h-[150%] absolute'>
-      <Canvas camera={{ position: [0, 0, 1] }}>
+    <div className='w-full h-[100vh] fixed bg-black z-[-1]'>
+      <Canvas  camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
-        <OrbitControls/>
+        {/* {window.innerWidth > 800 ?  <OrbitControls/> : <></>} */}
         <Preload all />
       </Canvas>
     </div>

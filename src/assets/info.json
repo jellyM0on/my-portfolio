@@ -1,5 +1,15 @@
 {
     "projects": [
-        {"title": "Poetry Blog", "description": "Sample description", "link": "link", "img": "img-link"}
+        {"title": "OCR Translator", 
+        "description": "Work in progress...", 
+        "link": "", 
+        "documentation": "", 
+        "img": ""},
+
+        {"title": "Literary Blog with CMS", 
+        "description": "\"Book Sleeper, a poetry blog\" - A full-stack MERN website with admin authentication using JWT to access an on-site Content Management System to handle post creation, modification, and deletion. Its database currently stores more than 100 text documents.", 
+        "link": "http://18.141.208.90/booksleeper/", 
+        "documentation": "https://github.com/jellyM0on/book-sleeper-blog", 
+        "img": "src/assets/project-imgs/project1.png"}
     ]
 }
