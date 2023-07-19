@@ -28,7 +28,7 @@ export default function Project(){
     }
 
     return(
-      <div className='h-full overflow-y-scroll sm:min-h-[100vw] border'>
+      <div className='h-full overflow-y-scroll sm:overflow-y-auto sm:min-h-[100vw] border'>
         <h2 className='text-right text-[4em] sm:text-[2em] mr-4 sm:mr-1  '>/My Projects</h2>
         <div>
            {projects.map((project, key) => <ProjectCard project={project} key={key}/>)}
