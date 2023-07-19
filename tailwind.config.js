@@ -5,6 +5,10 @@ export default {
   theme: {
     extend: {
     },
+    screens: {
+      'sm': {'max': '576px'},
+      'lg': {'min':'1440px'}
+    }
   },
   plugins: [require("tw-elements/dist/plugin.cjs")],
 }

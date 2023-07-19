@@ -18,14 +18,12 @@ document.body.onmousemove = function(e) {
 function App() {
 
   return(
-    <div className=' w-screen h-screen border-4 border-black box-border'>
+    <div className='w-screen h-screen border-box sm:h-fit border-4 border-black box-border max-h-[1300px]'>
       <span className='cursor'></span>
-    {/* body  */}
-    <NavBar/>
-    <div className='grid grid-cols-2 h-full box-border'>
-      <Intro/>
-      <Project/>
-
+      <NavBar/>
+      <div className='grid grid-cols-2 sm:flex sm:flex-col h-[calc(100%-3.5vw)] sm:h-full'>
+        <Intro/>
+        <Project/>
     </div>
   
     </div>
