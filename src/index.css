@@ -64,7 +64,7 @@ h1, h2, h3{
   to { transform: translateX(-50%); }
 }
 
-@media screen and (max-width: 576px){
+@media screen and (max-width: 750px){
   body{
     overflow-y: scroll; 
 
