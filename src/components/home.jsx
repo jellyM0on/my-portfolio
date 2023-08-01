@@ -9,7 +9,7 @@ export default function Intro() {
                 This site was built to display my personal projects as well as to learn more about AWS technologies. 
             </p>
             
-            <p className='pt-[2em]'>Contact: ylana.ong@gmail.com</p>
+            <p className='pt-[2em]'>Contact: ylanalor.ong@gmail.com</p>
         </div>
         <div className='absolute top-[40%] right-10 w-[50%] h-[50%] sm:w-[50%] sm:h-[50%]'>
             <Shape/>

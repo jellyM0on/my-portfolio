@@ -7,7 +7,7 @@ import { Canvas } from '@react-three/fiber';
 import Intro from './components/home';
 import NavBar from './components/navbar'
 import Project from './components/projects';
-import StarsCanvas from './components/stars'
+
 
 document.body.onmousemove = function(e) {
   document.documentElement.style.setProperty('--x',(e.clientX)+'px');
