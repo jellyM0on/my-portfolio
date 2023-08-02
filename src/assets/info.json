@@ -5,14 +5,15 @@
         "link": "", 
         "documentation": "", 
         "img": ""},
+
         {"title": "OCR Translator", 
         "description": "\"jpOCR\" - A NodeJS application built with Electron which recognizes Japanese text from a user-selected desktop window using an OCR engine and translates it to English through a fetch request to a LibreTranslate server ", 
         "link": "", 
         "documentation": "https://github.com/jellyM0on/ocr-translator", 
-        "img": ""},
+        "vid": "https://youtube.com/embed/HSruOH1ZVMo"},
 
         {"title": "Literary Blog with Management System", 
-        "description": "\"Book Sleeper, a poetry blog\" - A full-stack MERN website with admin authentication using JWT to access an on-site Post Management System to handle post creation, modification, and deletion. Its database currently stores more than 100 text documents.", 
+        "description": "\"Book Sleeper, a poetry blog\" - A full-stack MERN website with an on-site Post Management System to handle post creation, modification, and deletion. Its database currently stores more than 100 text documents.", 
         "link": "http://18.141.208.90/booksleeper/", 
         "documentation": "https://github.com/jellyM0on/book-sleeper-blog", 
         "img": "src/assets/project-imgs/project1.png"}

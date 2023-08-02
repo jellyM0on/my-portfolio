@@ -5,8 +5,8 @@ import { Mesh, MeshStandardMaterial, CanvasTexture } from 'three';
 
 const createGradientTexture = () => {
     const canvas = document.createElement('canvas');
-    canvas.width = 500;
-    canvas.height = 500;
+    canvas.width = 100;
+    canvas.height = 100;
   
     const context = canvas.getContext('2d');
     const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
@@ -34,7 +34,7 @@ const Scene = () => {
       <>
         <ambientLight intensity={0.1} />
         <directionalLight color='white'  position={[1, 5, 1]}/>
-        <Dodecahedron args={[3,0]}>
+        <Dodecahedron args={[2.5,0]}>
             <meshStandardMaterial map={gradientTexture} wireframe={true}/>
         </Dodecahedron>
         <OrbitControls/>
@@ -46,7 +46,7 @@ const Scene = () => {
   const Shape = () => {
     return (
       <Canvas>
-        <Scene />
+        <Scene/>
       </Canvas>
     );
   };

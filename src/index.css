@@ -1,35 +1,56 @@
-body{
-  overflow: hidden; 
-  max-height: 1200px; 
+html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 body {
   box-sizing: border-box; 
-  height: 100vh; 
+  max-width: 1440px; 
   background-color: #fff;
+
 }
 
 .cursor {
   position: absolute;
   width: 5vw;
   height: 5vw;
-  background: 	#f9e0e0;
+  background:  var(--colorbg, #f8b8f1); 
   border-radius: 50%;
   top: var(--y, 0);
   left: var(--x, 0);
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 100;
   mix-blend-mode: difference;
   pointer-events: none;
 }
 
-details >summary{
-  list-style: none;
+.circle-decor{
+  border-radius: 50%;
+  background-color: white;
+  width: 1em;
+  height: 1em;
+  border: solid 2px black;
 }
 
-details[open] summary{
-  background-color: black;
+.project-btn{
+  border: solid 2px black; 
+  margin-top: 2px; 
+  padding: 2px; 
   color: white;
+  background-color: black;
+}
+
+.project-btn:hover{
+  border: solid 2px black; 
+  color: black;
+  background-color: white;
+}
+
+.colorpicker{
+  margin-top: 0.25em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50px; 
 }
 
 h1, h2, h3{
@@ -37,7 +58,7 @@ h1, h2, h3{
 }
 
 .links > a > img{
-  width: 3vw; 
+  width: calc(3vw + 1em); 
 }
 
 .cursor-wrapper{
@@ -49,7 +70,7 @@ h1, h2, h3{
   width: 75vw;
   max-width: 100%;
   overflow-x: hidden;
-  font-size: 2vw;
+  font-size: calc(1vw + 1em);
 }
 
 .track {
@@ -83,10 +104,19 @@ h1, h2, h3{
     display: none; 
   }
 
+  .colorpicker-btns{
+    display:none; 
+  }
+}
 
+@media screen and (min-width: 2200px){
+  .links > a > img{
+    width: calc(10vw + 1em); 
+  }
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 

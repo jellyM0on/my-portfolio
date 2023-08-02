@@ -19,20 +19,20 @@ export default function NavBar(){
 
     const Links = () => {
         return(
-            <div className='flex '>
-                <div className='border-x-4 border-black px-5 text-[1.5vw] sm:text-[1em] flex items-center hover:bg-black hover:text-white'>
+            <div className='flex'>
+                <div className='border-x-4 border-black px-5 text-[calc(1em+1vw)]  flex items-center hover:bg-black hover:text-white'>
                     <a href='' >RESUME</a>
                 </div>
                 <div className='links flex border-x items-center gap-1'>
-                    <a href='https://mail.google.com/mail/u/0/?fs=1&to=ylana.ong@gmail.com&su=SUBJECT&body=&tf=cm'><img src={mailIcon}></img></a>
-                    <a href='https://github.com/jellyM0on'><img src={githubIcon}></img></a>
-                    <a href='https://www.linkedin.com/in/28b8b6259/'><img src={linkedInIcon}></img></a>
+                    <a href='https://mail.google.com/mail/u/0/?fs=1&to=ylanalor.ong@gmail.com&su=SUBJECT&body=&tf=cm' target='_blank'><img src={mailIcon}></img></a>
+                    <a href='https://github.com/jellyM0on' target='_blank'><img src={githubIcon}></img></a>
+                    <a href='https://www.linkedin.com/in/28b8b6259/' target='_blank'><img src={linkedInIcon}></img></a>
                 </div>
             </div>
         )
     }
     return(
-        <div className='sm:justify-end border-black border-b-4 flex  justify-between h-[3.5vw] sm:h-[10vw]'>
+        <div className='sm:justify-end usm:justify-end border-black border-b-4 flex  justify-between h-[calc(2.5vw+1em)] sticky top-0 right-0 bg-white z-10'>
             <WelcomeMarquee/>
             <Links/>
         </div>

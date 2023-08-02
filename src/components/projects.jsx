@@ -1,5 +1,5 @@
 import info from '../assets/info.json'
-import Shape2 from './shape2';
+import Shape from './shape';
 
 import { Collapse, initTE } from "tw-elements";
 initTE({ Collapse });
@@ -8,35 +8,44 @@ initTE({ Collapse });
 export default function Project(){
     const projects = info.projects; 
 
+
     const ProjectCard = (props) => {
         const { project } = props; 
         return(
-           <div className='border-black border-t-2'>
-            <details>
-                <summary className='hover:bg-black hover:text-white'><h3 className='text-[1.5em] sm:text-[1.25em] lg:text-[2em] pl-1'><span></span>{project.title}</h3></summary>
-                <div className='p-4 flex flex-col items-center gap-2'>
-                    <img src={project.img} className='w-[75%]'></img>
-                    <div className='flex gap-2 text-[1.25em] sm:text-[1em] lg:text-[1.5em]'>
-                    {project.link === "" ? <></>  : <a href={project.link} className='hover:underline'>Site</a> }
-                    {project.documentation === "" ? <></>  : <a href={project.documentation} className='hover:underline'>Github</a> } 
+           <div className='border-2 border-black pb-4'>
+            <div className='flex w-full justify-center gap-1 my-2'>
+                <div className='circle-decor'></div>
+                <div className='circle-decor'></div>
+                <div className='circle-decor'></div>
+            </div>
+
+                <h3 className='text-[calc(1vw+1em)] pl-4 font-bold'>{project.title}</h3>
+                <div className='p-4 usm:flex usm:flex-col usm:items-center'>
+                    {project.vid ? 
+                    <iframe src={project.vid} allowFullScreen='allowfullscreen' frameBorder="0" className='float-left usm:float-none w-[70%] mr-4'></iframe>
+                    :
+                    <img src={project.img} className='float-left w-[70%] mr-4 usm:float-none  '></img>
+                    }
+                    <p className='text-[calc(0.5vw+0.75em)] text-justify usm:py-2'>{project.description}</p>
+                    <div className='flex gap-2 text-[calc(0.25vw+1em)] float-right'>
+                            {project.link === "" ? <></>  : <a href={project.link} className='hover:underline project-btn'>Demo</a> }
+                            {project.documentation === "" ? <></>  : <a href={project.documentation} className='hover:underline project-btn'>Github</a> } 
                     </div>
-                    <p className='text-[1.25em] sm:text-[1em] text-justify lg:text-[1.5em]'>{project.description}</p>
                 </div>
-            </details>
            </div>
         )
     }
 
     return(
-      <div className='h-full overflow-y-scroll sm:overflow-y-auto sm:min-h-[100vw] border'>
-        <h2 className='text-right text-[4em] sm:text-[2em] mr-4 sm:mr-1  '>/My Projects</h2>
-        <div>
+      <div className='m-2 mt-6'>
+        <div className='flex items-center'>
+            <div className='w-[4em] h-[4em] p-0'><Shape/></div>
+            <h2 className='text-[calc(2.5vw+1em)]'>/My Projects</h2>
+        </div>
+    
+        <div className='grid grid-cols-2 gap-[4em] mx-4 usm:flex usm:flex-col sm:flex sm:flex-col'>
            {projects.map((project, key) => <ProjectCard project={project} key={key}/>)}
         </div>
-        <div>
-            {/* <Shape2/> */}
-        </div>
-
       </div>
     )
 }
