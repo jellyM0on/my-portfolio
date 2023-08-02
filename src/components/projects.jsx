@@ -28,8 +28,8 @@ export default function Project(){
                     }
                     <p className='text-[calc(0.5vw+0.75em)] text-justify usm:py-2'>{project.description}</p>
                     <div className='flex gap-2 text-[calc(0.25vw+1em)] float-right'>
-                            {project.link === "" ? <></>  : <a href={project.link} className='hover:underline project-btn'>Demo</a> }
-                            {project.documentation === "" ? <></>  : <a href={project.documentation} className='hover:underline project-btn'>Github</a> } 
+                            {project.link === "" ? <></>  : <a href={project.link} target="_blank" className='hover:underline project-btn'>Demo</a> }
+                            {project.documentation === "" ? <></>  : <a href={project.documentation} target="_blank" className='hover:underline project-btn'>Github</a> } 
                     </div>
                 </div>
            </div>

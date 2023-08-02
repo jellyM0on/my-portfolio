@@ -16,6 +16,6 @@
         "description": "\"Book Sleeper, a poetry blog\" - A full-stack MERN website with an on-site Post Management System to handle post creation, modification, and deletion. Its database currently stores more than 100 text documents.", 
         "link": "http://18.141.208.90/booksleeper/", 
         "documentation": "https://github.com/jellyM0on/book-sleeper-blog", 
-        "img": "src/assets/project-imgs/project1.png"}
+        "img": "/project-imgs/project1.png"}
     ]
 }
