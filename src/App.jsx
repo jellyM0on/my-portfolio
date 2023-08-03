@@ -21,7 +21,7 @@ document.body.onmousemove = function(e) {
 function App() {
 
   return(
-    <div className='mx-10 border-box border-4 border-black box-border relative'>
+    <div className='mx-2 border-box border-4 border-black box-border relative'>
       <NavBar/>
       <ColorPicker/>
       <Intro/>
