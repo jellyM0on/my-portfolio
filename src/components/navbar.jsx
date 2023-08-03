@@ -21,7 +21,7 @@ export default function NavBar(){
         return(
             <div className='flex'>
                 <div className='border-x-4 border-black px-5 text-[calc(1em+1vw)]  flex items-center hover:bg-black hover:text-white'>
-                    <a href='' >RESUME</a>
+                    <a href='https://drive.google.com/uc?export=download&id=1ifRBGN70QghMQ4xpkzEYCyqtsTvjHMjI'>RESUME</a>
                 </div>
                 <div className='links flex border-x items-center gap-1'>
                     <a href='https://mail.google.com/mail/u/0/?fs=1&to=ylanalor.ong@gmail.com&su=SUBJECT&body=&tf=cm' target='_blank'><img src={mailIcon}></img></a>
